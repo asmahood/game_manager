@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# IDE folders
+.vscode
+
+# build files
+directories
+
+# npm package files
+package-lock.json
