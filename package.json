@@ -1,0 +1,27 @@
+{
+  "name": "game_manager",
+  "version": "0.0.1",
+  "description": "A tool to manage and track the number of games refereed by myself and track the amount of money earned throughout the season.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asmahood/game_manager.git"
+  },
+  "author": "Adam Mahood (mahood.adam@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asmahood/game_manager/issues"
+  },
+  "homepage": "https://github.com/asmahood/game_manager#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.6.2",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "typescript": "^3.5.3"
+  }
+}

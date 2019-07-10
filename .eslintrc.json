@@ -1,0 +1,66 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/func-call-spacing": ["error", "never"],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/member-naming": ["error", {
+      "private": "^_"
+    }],
+    "@typescript-eslint/member-ordering": ["error", { "default": [
+      "public-static-field",
+      "protected-static-field",
+      "private-static-field",
+  
+      "public-instance-field",
+      "protected-instance-field",
+      "private-instance-field",
+  
+      "public-field",
+      "protected-field",
+      "private-field",
+  
+      "static-field",
+      "instance-field",
+  
+      "field",
+  
+      "constructor",
+  
+      "public-static-method",
+      "protected-static-method",
+      "private-static-method",
+  
+      "public-instance-method",
+      "protected-instance-method",
+      "private-instance-method",
+  
+      "public-method",
+      "protected-method",
+      "private-method",
+  
+      "static-method",
+      "instance-method",
+  
+      "method"
+    ] }],
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-for-in-array": "error",
+    "@typescript-eslint/no-this-alias": "error",
+    "@typescript-eslint/no-unnecessary-qualifier": "error",
+    "@typescript-eslint/no-unnecessary-type-assertion": "error",
+    "@typescript-eslint/no-useless-constructor": "error",
+    "@typescript-eslint/prefer-for-of": "error",
+    "func-call-spacing":"off",
+    "indent": "off",
+    "no-empty-function": "off",
+    "no-magic-numbers": "off"
+  }
+}
