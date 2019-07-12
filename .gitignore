@@ -64,7 +64,7 @@ typings/
 .vscode
 
 # build files
-directories
+dist
 
 # npm package files
 package-lock.json
