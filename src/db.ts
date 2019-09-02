@@ -11,4 +11,4 @@ export const client = new Client({
 // connect client to the server
 client.connect()
   .then((): void => console.log('client connected to server'))
-  .catch((err): void => console.error(`error connecting to server: ${err}`));
+  .catch((err): void => console.error(`error connecting to server: \n${err}`));
