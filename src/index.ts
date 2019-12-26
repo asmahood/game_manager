@@ -1,6 +1,7 @@
 import Referee from './Referee'
+import { Age, Level, System, Position, Game, Partner } from './Game'
 
-import { referees } from '../mock_data.json';
+import { referees, games } from '../mock_data.json';
 
 import process from 'process';
 
@@ -26,6 +27,35 @@ function print_referees(refs: Referee[]): void {
   process.stdout.write(s);
 }
 
+function init_games(refs: Referee[]): Game[] {
+  let gms: Game[] = [];
+  let partners: Partner[] = [];
+
+  for (const g of games) {
+    for (const p of g.partners) {
+      const referee = refs[p.id - 1];
+      partners.push({ referee, position: p.position as Position });
+    }    
+
+
+    const game = new Game(g.id, g.location, g.age as Age, 
+      g.level as Level, g.sys as System, g.position as Position, partners);
+  
+  gms.push(game);
+  }
+
+  return games;
+}
+
+//function print_games(): void {
+//
+//}
+
 const refs = init_referees();
 
 print_referees(refs);
+console.log('/n')
+
+const gms = init_games(refs);
+
+console.log(gms);
