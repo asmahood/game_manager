@@ -21,6 +21,11 @@ export default class Referee {
    * The referee's full name
    */
   private _fullName: string;
+
+  /**
+   * The referee's certification level
+   */
+  private _level: number;
   
   /**
    * Creates a new referee object
@@ -28,12 +33,14 @@ export default class Referee {
    * @param firstName The first name of the referee
    * @param lastName  THe last name of the referee
    */
-  public constructor(id: number, firstName: string, lastName: string) {
+  public constructor(id: number, firstName: string, lastName: string, level: number) {
     this._id = id;
 
     this._firstName = firstName;
     this._lastName = lastName;
     this._fullName = `${firstName} ${lastName}`;
+
+    this._level = level;
   }
 
   /**
@@ -63,4 +70,13 @@ export default class Referee {
   public getFullName(): string {
     return this._fullName;
   }
+
+  /**
+   * getLevel
+   */
+  public getLevel(): number {
+    return this._level;
+  }
+
 };
+
