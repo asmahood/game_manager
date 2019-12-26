@@ -66,8 +66,3 @@ typings/
 # build files
 dist
 
-# npm package files
-package-lock.json
-
-# JSON files
-config.json
