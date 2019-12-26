@@ -1,0 +1,64 @@
+{
+  "referees": [
+    {
+      "id": 1,
+      "first_name": "Adam",
+      "last_name": "Mahood",
+      "level": 2
+    },
+    {
+      "id": 2,
+      "first_name": "Reese",
+      "last_name": "Morrison",
+      "level": 2
+    },
+    {
+      "id": 3,
+      "first_name": "John",
+      "last_name": "Doe",
+      "level": 3
+    },
+    {
+      "id": 4,
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "level": 4
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "location": "Chedoke Twin Pad",
+      "age": "atom",
+      "level": "HL",
+      "sys": "2-Man System",
+      "position": "2-Man Referee",
+      "partners": [
+        { "id": 2, "position": "2-Man Referee" }
+      ]
+    },
+    {
+      "id": 2,
+      "location": "Chedoke Twin Pad",
+      "age": "atom",
+      "level": "HL",
+      "sys": "2-Man System",
+      "position": "2-Man Referee",
+      "partners": [
+        { "id": 2, "position": "2-Man Referee" }
+      ]
+    },
+    {
+      "id": 3,
+      "location": "Parkdale",
+      "age": "bantam",
+      "level": "AAA",
+      "sys": "3-Man System",
+      "position": "3-Man Linesman",
+      "partners": [
+        { "id": 4, "position": "3-Man Referee" },
+        { "id": 3, "position": "3-Man Linesman" }
+      ]
+    }
+  ]
+}
