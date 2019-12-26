@@ -1,21 +1,19 @@
-import { client as db } from './db';
+import Referee from './Referee'
 
-db.query('SELECT NOW()')
-  .then((res): void => {
-    console.log(res);
-    process.exit(0);
-  })
-  .catch((err): void => {
-    console.error(err);
-    process.exit(1);
-  });
+import { referees } from '../mock_data.json';
 
-// process.stdin.on('readable', (): void => {
-//   let chunk = process.stdin.read();
+function init_referees(): Referee[] {
+  let refs: Referee[] = [];
 
-//   process.stdout.write(`data: ${chunk}`);
-// });
+  for (const r of referees) {
+    const ref = new Referee(r.id, r.first_name, r.last_name);
 
-// process.stdin.on('end', (): void => {
-//   process.stdout.write('end');
-// });
+    refs.push(ref);
+  }
+
+  return refs;
+}
+
+const refs = init_referees();
+
+console.log(refs);
