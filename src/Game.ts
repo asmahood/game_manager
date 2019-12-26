@@ -42,7 +42,7 @@ export const enum Position {
   Line4Man = "4-Man Linesman"
 }
 
-interface Partner {
+export interface Partner {
   referee: Referee;
   position: Position;
 }
