@@ -4,7 +4,8 @@
   "description": "A tool to manage and track the number of games refereed by myself and track the amount of money earned throughout the season.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node ./dist/src/index.js"
   },
   "repository": {
     "type": "git",
