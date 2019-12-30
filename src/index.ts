@@ -1,7 +1,7 @@
 import process from 'process';
 
-import Referee from './Referee';
-import { Age, Level, System, Position, Game, Partner } from './Game';
+import Referee from './structures/Referee';
+import { Age, Level, System, Position, Game, Partner } from './structures/Game';
 
 import { referees, games } from '../mock_data.json';
 
@@ -47,15 +47,36 @@ function initGames(refs: Referee[]): Game[] {
   return games;
 }
 
-//function print_games(): void {
-//
-//}
-
+// Run initializers
 const refs = initReferees();
-
-printReferees(refs);
-console.log('/n');
-
+// @ts-ignore
 const gms = initGames(refs);
 
-console.log(gms);
+const { argv: args } = process;
+
+// Add new files argument
+if (args[2] === '-a') {
+  const files = args.slice(3);
+
+// Display ref or game table 
+} else if (args[2] === '-d') {
+  const opt = args[3];
+
+  if (!opt) {
+    process.stdout.write('No option found. Exiting process...');
+    process.exit(1);
+  } else if (opt === 'refs') {
+    printReferees(refs);
+  } else if (opt === 'games') {
+    // printGames(gms);
+  }
+} else {
+  // No commands were recognized so print help message
+  process.stdout.write(
+    `Welcome to Game Manager!\n
+    Here is a list of accepted commands:\n
+    -d [refs|games]     --  Displays either the referees or games in the database 
+    -a file [...files]  --  Parses each file to add new games to the database`
+  );
+}
+
