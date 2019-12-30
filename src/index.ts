@@ -1,11 +1,11 @@
-import Referee from './Referee'
-import { Age, Level, System, Position, Game, Partner } from './Game'
+import process from 'process';
+
+import Referee from './Referee';
+import { Age, Level, System, Position, Game, Partner } from './Game';
 
 import { referees, games } from '../mock_data.json';
 
-import process from 'process';
-
-function init_referees(): Referee[] {
+function initReferees(): Referee[] {
   let refs: Referee[] = [];
 
   for (const r of referees) {
@@ -17,17 +17,17 @@ function init_referees(): Referee[] {
   return refs;
 }
 
-function print_referees(refs: Referee[]): void {
-  let s: string = '';
+function printReferees(refs: Referee[]): void {
+  let s = '';
   
   for (const r of refs) {
-    s += `Referee #${r.getID()}\nName: ${r.getFullName()}\nLevel: ${r.getLevel()}\n`
+    s += `Referee #${r.getID()}\nName: ${r.getFullName()}\nLevel: ${r.getLevel()}\n`;
   }
 
   process.stdout.write(s);
 }
 
-function init_games(refs: Referee[]): Game[] {
+function initGames(refs: Referee[]): Game[] {
   let gms: Game[] = [];
   let partners: Partner[] = [];
 
@@ -41,7 +41,7 @@ function init_games(refs: Referee[]): Game[] {
     const game = new Game(g.id, g.location, g.age as Age, 
       g.level as Level, g.sys as System, g.position as Position, partners);
   
-  gms.push(game);
+    gms.push(game);
   }
 
   return games;
@@ -51,11 +51,11 @@ function init_games(refs: Referee[]): Game[] {
 //
 //}
 
-const refs = init_referees();
+const refs = initReferees();
 
-print_referees(refs);
-console.log('/n')
+printReferees(refs);
+console.log('/n');
 
-const gms = init_games(refs);
+const gms = initGames(refs);
 
 console.log(gms);
