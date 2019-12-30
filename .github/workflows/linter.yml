@@ -20,6 +20,6 @@ jobs:
     - name: Lint Source Files
       run: |
         npm ci
-        node ./node_modules/eslint/bin/eslint.js src/**
+        npm run lint
       env:
         CI: true
