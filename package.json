@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/asmahood/game_manager#readme",
   "dependencies": {
-    "pg": "^7.12.1"
+    "pg": "^7.18.2"
   },
   "devDependencies": {
     "@types/node": "^13.1.1",
